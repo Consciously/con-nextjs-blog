@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,7 +8,13 @@ import utilStyles from '../styles/utils.module.css';
 const name = 'Stefan Ihle';
 export const siteTitle = 'Next.js Sample Website';
 
-const Layout = ({ children, home }) => {
+const Layout = ({
+	children,
+	home,
+}: {
+	children: ReactNode;
+	home?: boolean;
+}) => {
 	return (
 		<div className={styles.container}>
 			<Head>
